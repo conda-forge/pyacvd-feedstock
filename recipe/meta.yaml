@@ -1,5 +1,5 @@
 {% set name = "pyacvd" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.9" %}
 
 package:
   name: pyacvd
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyacvd-{{ version }}.tar.gz
-  sha256: b4eb465b7ce6807b83273ceac9acb8510c4d816f2d0f8a521100222a86935d82
+  sha256: b9bbf5b692f782d5c60c8d8049198219c42b676b40dd361bf8eb01d6a905026e
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
