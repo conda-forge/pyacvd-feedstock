@@ -240,4 +240,5 @@ Feedstock Maintainers
 =====================
 
 * [@akaszynski](https://github.com/akaszynski/)
+* [@ytausch](https://github.com/ytausch/)
 
