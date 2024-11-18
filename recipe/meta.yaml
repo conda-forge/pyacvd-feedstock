@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make
     - python
