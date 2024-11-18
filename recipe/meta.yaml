@@ -15,6 +15,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
@@ -26,7 +27,7 @@ requirements:
     - pip
     - python
   run:
-    - python >=3.9
+    - python
     - pyvista >=0.37.0
     - pykdtree
     - {{ pin_compatible('numpy') }}
