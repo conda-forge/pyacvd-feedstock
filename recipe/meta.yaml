@@ -1,33 +1,35 @@
 {% set name = "pyacvd" %}
-{% set version = "0.2.7" %}
+{% set version = "0.3.1" %}
 
 package:
   name: pyacvd
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyacvd-{{ version }}.tar.gz
-  sha256: b4eb465b7ce6807b83273ceac9acb8510c4d816f2d0f8a521100222a86935d82
+  url: https://github.com/pyvista/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: ab824260cea2912c51e2b2fc92d6f20b79b9ca72dcff9eec2459b3e20469b8f9
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cython
+    - cmake
+    - make
     - python
   host:
-    - cython
+    - scikit-build-core
+    - nanobind
     - numpy
     - pip
     - python
     - glew
   run:
-    - python
-    - pyvista >=0.23.0
-    - scipy
+    - python >=3.9
+    - pyvista >=0.37.0
+    - pykdtree
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -47,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - akaszynski
+    - ytausch
