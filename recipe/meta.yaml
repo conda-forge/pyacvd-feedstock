@@ -25,7 +25,6 @@ requirements:
     - numpy
     - pip
     - python
-    - glew
   run:
     - python >=3.9
     - pyvista >=0.37.0
