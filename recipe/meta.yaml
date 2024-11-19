@@ -15,11 +15,13 @@ build:
 
 requirements:
   build:
+    - python  # [build_platform != target_platform]
+    # there is no cross-python for linux-64 -> win-64
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform and not target_platform == "win-64"]
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make
-    - python
   host:
     - scikit-build-core
     - nanobind
