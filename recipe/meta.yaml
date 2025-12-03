@@ -1,5 +1,5 @@
 {% set name = "pyacvd" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: pyacvd
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pyvista/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 247f71dea890ea5652bf8f299003818b3bfe3ee9b7a5a93c62d021609b52d4a3
+  sha256: 6d74ad81d656829baf7cd83f7bfe446f6ff6d84caa4b1dc41a827fea9f71786c
 
 build:
   number: 0
